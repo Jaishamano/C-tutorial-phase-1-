@@ -1,0 +1,74 @@
+Level 2: Datatypes & Character Basics
+
+Problem 3: Character Case Shifter
+Goal: Explore how char types interact with integers using ASCII values.
+Input: Read a single lowercase letter from the user (char).
+Task: Subtract 32 from the character value to convert it to uppercase.
+Output: Print both the original character and its new uppercase counterpart.
+
+
+
+CODE:
+
+#include <stdio.h>
+#include <ctype.h> 
+int main() {
+    char ch;
+
+    printf("Enter a single lowercase letter: ");
+    if (scanf(" %c", &ch) != 1) {  
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    
+    if (islower(ch)) {
+        char upper = ch - 32;  // ASCII: 'a' (97) - 32 = 'A' (65)
+        printf("Original character: %c\n", ch);
+        printf("Uppercase character: %c\n", upper);
+    } else {
+        printf("Error: Please enter a lowercase letter (a-z).\n");
+    }
+
+    return 0;
+}
+
+
+OUTPUT:
+
+
+Enter a single lowercase letter: j
+Original character: j
+Uppercase character: J
+
+
+
+Enter a single lowercase letter: a
+Original character: a
+Uppercase character: A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

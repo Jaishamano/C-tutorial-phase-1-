@@ -1,0 +1,57 @@
+Level 1: Basic Syntax & Arithmetic
+
+Problem 1: The Smart Bill Calculator
+Goal: Calculate a restaurant bill with tax and tip.
+Input: Ask the user for the base food bill (double).
+Task:Add an 18% tax to the base bill.
+Add a 10% tip to the base bill.
+Calculate the grand total.
+Output: Print the tax, tip, and total amount formatted to 2 decimal places.
+
+
+CODE:
+
+#include <stdio.h>
+int main(){
+    double base_bill;
+    double tax,tip,grand_total;
+    
+    printf("\n enter the base food bill amount:");
+    if (scanf("%if", & base_bill)!=1){
+        printf("invalid input.\n");
+        return 1;
+    }
+    tax= base_bill *0.18;
+    tip= base_bill *0.10;
+    grand_total=  base_bill+tip+tax;
+    
+    
+    printf("\n----Bill Summary-----\n");
+    printf("tax (18%%) : $.2f\n" , tax);
+     printf("tip (10%%) : $.2f\n" , tip);
+      printf("grand_total (18%%) : $.2f\n" , grand_total);
+      
+      return 0;
+}
+OUTPUT:
+
+
+
+ enter the base food bill amount:500
+
+----Bill Summary-----
+tax (18%) : $.2f
+tip (10%) : $.2f
+grand_total (18%) : $.2f
+
+
+
+
+
+
+
+
+
+
+
+

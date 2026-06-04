@@ -1,0 +1,74 @@
+Problem 2: Time Dissector
+Goal: Convert a large number of seconds into hours, minutes, and remaining seconds.
+Input: Take a single integer representing total seconds (int).
+Task: Use the integer division (/) and modulo (%) operators.
+Output: Print the result in the format: H hours, M minutes, S seconds.
+
+CODE:
+
+
+#include <stdio.h>
+
+int main() {
+    int hours, minutes, seconds;
+    int n;
+    int count = 0;
+
+    
+    printf("Enter the total number of seconds: ");
+    if (scanf("%d", &n) != 1 || n < 0) {
+        printf("Invalid input. Please enter a non-negative integer.\n");
+        return 1;
+    }
+
+    
+    hours = n / 3600;
+    minutes = (n % 3600) / 60;
+    seconds = n % 60;
+
+    count++; 
+
+    
+    printf("Hours = %d\n", hours);
+    printf("Minutes = %d\n", minutes);
+    printf("Seconds = %d\n", seconds);
+    printf("Count = %d\n", count);
+
+    return 0;
+}
+
+
+
+OUTPUT:
+
+Enter the total number of seconds: 500
+Hours = 0
+Minutes = 8
+Seconds = 20
+Count = 1
+
+
+Enter the total number of seconds: 3600
+Hours = 1
+Minutes = 0
+Seconds = 0
+Count = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

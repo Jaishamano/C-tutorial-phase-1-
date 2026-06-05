@@ -1,0 +1,53 @@
+
+Problem 4: Precision Checker
+Goal: See the difference between float and double precision.
+Input: Read a precise number (like 3.1415926535) into both a float and a double variable.
+Output: Print both variables using the format specifier %.10f to see where the float loses accuracy.
+
+
+
+CODE:
+
+#include <stdio.h>
+
+int main() {
+    float f;
+    double d;
+
+    // Read the same precise number into both variables
+    printf("Enter a precise number (e.g., 3.1415926535): ");
+    scanf("%lf", &d); // Read into double first
+
+    f = (float)d; // Assign double value to float
+
+    // Print both with 10 decimal places
+    printf("Float  : %.10f\n", f);
+    printf("Double : %.10f\n", d);
+
+    return 0;
+}
+
+OUTPUT:
+
+Enter a precise number (e.g., 3.1415926535): 4.5433345566677654
+Float  : 4.5433344841
+Double : 4.5433345567
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
